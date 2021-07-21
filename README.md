@@ -40,14 +40,11 @@
 ### Пример записи теста в Selenoid:
 ![видео прогона тестов](./images/c6c993a2bcb88485.gif "Запись прогона тестов")
 
+## Кстати! Тесты могут "бегать" по расписанию без моего участия, отчет о их прохождении мне любезно скинет в телеграмм IgggarsHelperBOT!:
+![БОТ](./images/bot.JPG "БОТ")
+ 
 
-
-
-
-
-
-
-### Проект можно склонировать и запустить тесты из терминала:
+### Если нет желания пользоваться услугами Jenkins`a, то проект можно склонировать и запустить тесты из терминала:
 Запустить тесты с дефолтными параметрами:
 ```bash
 gradle clean test
@@ -61,13 +58,3 @@ gradle clean -DremoteDriverUrl=https://user1:1234@selenoid.autotests.cloud/wd/hu
 Сформировать отчет в Allure:
 ```bash
 allure serve build/allure-results
-
-
-
-
-
-
-:heart: <a target="_blank" href="https://qa.guru">qa.guru</a><br/>
-:blue_heart: <a target="_blank" href="https://t.me/qa_automation">t.me/qa_automation</a>
-
-

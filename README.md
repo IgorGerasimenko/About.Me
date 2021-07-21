@@ -1,8 +1,6 @@
 ![я](./images/me.jpg "бот в телеграмме")
 
-# ВСЕМ Привет! Прочитай ниже что это за проект и как им пользоваться! Спасибо!
-
-### Я прохожу курсы по автоматизации тестирования и находясь ровно на экваторе решил сделать этот небольшой проект. Я написал 5 тестов на сайт компании в которой работаю.
+### Всем привет! Я Игорь и я прохожу курсы по автоматизации тестирования и находясь ровно на экваторе решил сделать этот небольшой проект. Я написал 5 тестов на сайт компании в которой работаю.
 
 Тесты были написаны на Java + JUnit5 + Selenide + Gradle
 
@@ -19,41 +17,55 @@
 С отчетами в Allure + Telegram
 | Allure Report | Telegram |
 |:---------:|:--------:|
-| <img src="forReadme/Allure.svg" width="40" height="40"> | <img src="forReadme/Telegram.svg" width="40" height="40"> |
+| <img src="images/Allure.svg" width="40" height="40"> | <img src="images/Telegram.svg" width="40" height="40"> |
 
-## Запуск через Jenkins https://jenkins.autotests.cloud/view/QA.GURU%20students/job/c06-dbusygin91-forCompany/
-
-
-* browser (default chrome)
-* browserVersion (default 89.0)
-* browserSize (default 1920x1080)
-* browserMobileView (mobile device name, for example iPhone X)
-* remoteDriverUrl (url address from selenoid or grid)
-* videoStorage (url address where you should get video)
-* threads (number of threads)
+## Запускать тесты нам помогает Jenkins https://jenkins.autotests.cloud/job/ArSoft-Tests/
 
 
-Run tests with filled remote.properties:
+### Перед запуском можно выбрать следующие параметры:
+* browser (default chrome) - Выбрать браузер
+* browserVersion (default 91.0) - Выбрать версию браузера
+* browserSize (default 1920x1080) - Выбрать разрешение браузера
+* browserMobileView (mobile device name, for example iPhone X) - Прогнать тесты в мобильных браузерах
+* remoteDriverUrl (url address from selenoid or grid) - Можно поменять путь до Selenoid
+* threads (number of threads) - Выбрать количество потоков 
+### Вот так выглядит страничка выбора параметров:
+![страница параметров](./images/jenkinsParam.JPG "Страница параметров")
+
+## После прохождения тестов формируется отчет Allure
+### Пример отчета:
+![Allure отчет](./images/allurExample.JPG "Alure отчет")
+
+## Прогон тестов осуществляется в Selenoid https://selenoid.autotests.cloud/#/, видеозапись прогона можно посмотреть в отчете Allure
+### Пример записи теста в Selenoid:
+![видео прогона тестов](./images/c6c993a2bcb88485.gif "Запись прогона тестов")
+
+
+
+
+
+
+
+
+### Проект можно склонировать и запустить тесты из терминала:
+Запустить тесты с дефолтными параметрами:
 ```bash
 gradle clean test
 ```
 
-Run tests with not filled remote.properties:
+Запустить тесты с нужными нам параметрами:
 ```bash
 gradle clean -DremoteDriverUrl=https://user1:1234@selenoid.autotests.cloud/wd/hub/ -DvideoStorage=https://selenoid.autotests.cloud/video/ -Dthreads=1 test
 ```
 
-Serve report:
+Сформировать отчет в Allure:
 ```bash
 allure serve build/allure-results
-```
 
 
-For further development there are some example tests in src/test/java/cloud.autotests/tests/demowebshop
-* remove @Disabled("...") annotation to run tests
-```bash
-gradle clean demowebshop
-```
+
+
+
 
 :heart: <a target="_blank" href="https://qa.guru">qa.guru</a><br/>
 :blue_heart: <a target="_blank" href="https://t.me/qa_automation">t.me/qa_automation</a>

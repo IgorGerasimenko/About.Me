@@ -13,7 +13,7 @@ import static io.qameta.allure.Allure.step;
 
 public class ArSoftTests extends TestBase {
     @Test
-    @Description("Soon to be implemented by you (or QA.GURU engineers)")
+    @Description("Тест-кейс №1")
     @DisplayName("Проверка что есть надпись на главное странице")
     void titleTest() {
         step("Open url 'https://vr-arsoft.com/ru_RU/'", () ->
@@ -25,7 +25,7 @@ public class ArSoftTests extends TestBase {
     }
 
     @Test
-    @Description("Soon to be implemented by you (or QA.GURU engineers)")
+    @Description("Тест-кейс №2")
     @DisplayName("Проверка, что кнопка `отправить` формы обратной связи не кликабельна если НЕ выбран чекбокс 'Согласен на обработку персональных данных' ")
     void sendButtonIsNotClickableTest() {
         step("Open url 'https://vr-arsoft.com/ru_RU/'", () ->
@@ -37,7 +37,7 @@ public class ArSoftTests extends TestBase {
     }
 
     @Test
-    @Description("Soon to be implemented by you (or QA.GURU engineers)")
+    @Description("Тест-кейс №3")
     @DisplayName("Проверка, что кнопка `отправить` формы обратной связи кликабельна если выбран чекбокс 'Согласен на обработку персональных данных' ")
     void sendButtonIsClickableTest() {
         step("Open url 'https://vr-arsoft.com/ru_RU/'", () ->
@@ -53,7 +53,7 @@ public class ArSoftTests extends TestBase {
     }
 
     @Test
-    @Description("Soon to be implemented by you (or QA.GURU engineers)")
+    @Description("Тест-кейс №4")
     @DisplayName("Проверка что на странице `Контакты` указан телефон")
     void phoneNumberIsVisibleTest() {
         step("Open url 'https://vr-arsoft.com/ru_RU/contact/'", () ->
@@ -65,7 +65,7 @@ public class ArSoftTests extends TestBase {
     }
 
     @Test
-    @Description("Soon to be implemented by you (or QA.GURU engineers)")
+    @Description("Тест-кейс №5")
     @DisplayName("Проверка что переход с главной страницу в группу в ВК осуществляется успешно")
     void openVkGroupTest() {
         step("Open url 'https://vr-arsoft.com/ru_RU/'", () ->
